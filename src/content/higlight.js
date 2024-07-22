@@ -28,7 +28,7 @@ const TextHighlighter = ({ text ,classname}) => {
   );
 };
 
-const New = () => {
+const About = () => {
   return (
     <div className="text-container">
       <TextHighlighter text="Hello!!"  classname="letter"/>
@@ -36,8 +36,7 @@ const New = () => {
 
       <TextHighlighter text="I'm Likith a Software Engineer,"  classname="subtitle_header"/>
       <TextHighlighter text="based in Bengaluru"  classname="subtitle_header"/>
-      <div class='pt-5'>
-
+      <div class=' all_about pt-5'>
         <TextHighlighter text = "About me" classname='aboutme' />
       <TextHighlighter text = "Software Engineer with a specialization in Artificial Intelligence and Machine Learning ," classname='aboutdata1'/> 
       <TextHighlighter text = "Skilled in Python programming and currently pursuing courses to stay updated in the field. " classname='aboutdata2' />
@@ -48,4 +47,4 @@ const New = () => {
   );
 };
 
-export default New ;
+export default About;

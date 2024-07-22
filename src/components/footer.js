@@ -6,7 +6,7 @@ const Footer=()=> {
     console.log(currentYear); 
   return (
     <div className='footer' >
-      <h6>{currentYear} All Rights reserved © Made with React|Designed and Developed by Likith</h6>
+      <p>{currentYear} All Rights reserved © Made with React|Designed and Developed by Likith</p>
     </div>
   )
 }
