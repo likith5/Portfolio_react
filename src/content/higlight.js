@@ -36,12 +36,12 @@ const About = () => {
 
       <TextHighlighter text="I'm Likith a Software Engineer,"  classname="subtitle_header"/>
       <TextHighlighter text="based in Bengaluru"  classname="subtitle_header"/>
-      <div class=' all_about pt-5'>
+      <div class=' all_about'>
         <TextHighlighter text = "About me" classname='aboutme' />
       <TextHighlighter text = "Software Engineer with a specialization in Artificial Intelligence and Machine Learning ," classname='aboutdata1'/> 
       <TextHighlighter text = "Skilled in Python programming and currently pursuing courses to stay updated in the field. " classname='aboutdata2' />
       <TextHighlighter text='Strong communication, improvisation, and problem-solving abilities.' classname="aboutdata3" /> 
-
+      <TextHighlighter text="Check out my Projects page" classname="aboutme"/>
       </div>
     </div>
   );

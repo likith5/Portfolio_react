@@ -31,10 +31,10 @@ export default function Connect() {
           <i className="fa-regular fa-envelope fa-2xl"></i>
         </a>
       </div>
-      <div>
-        <p>Visitors</p>
+      {/* <div className='visitors'>
+        <p>Hit a Like</p>
         <p>{refreshCount}</p>
-      </div>
+      </div> */}
     </div>
   );
 }
