@@ -38,10 +38,10 @@ const About = () => {
       <TextHighlighter text="based in Bengaluru"  classname="subtitle_header"/>
       <div class=' all_about'>
         <TextHighlighter text = "About me" classname='aboutme' />
-      <TextHighlighter text = "Software Engineer with a specialization in Artificial Intelligence and Machine Learning ," classname='aboutdata1'/> 
-      <TextHighlighter text = "Skilled in Python programming and currently pursuing courses to stay updated in the field. " classname='aboutdata2' />
-      <TextHighlighter text='Strong communication, improvisation, and problem-solving abilities.' classname="aboutdata3" /> 
-      <TextHighlighter text="Check out my Projects page" classname="aboutme"/>
+      <TextHighlighter text = "AI and Machine Learning enthusiast with strong expertise in Python programming," classname='aboutdata1'/> 
+      <TextHighlighter text = "Experienced in creating AI solutions and constantly enhancing skills through ongoing courses. " classname='aboutdata2' />
+      <TextHighlighter text='Passionate about using data-driven approaches to tackle challenging problems.' classname="aboutdata3" /> 
+      {/* <TextHighlighter text="Check out my Projects page" classname="aboutme"/> */}
       </div>
     </div>
   );
