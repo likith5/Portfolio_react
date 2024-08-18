@@ -61,7 +61,7 @@ export default function Connect() {
         </a>
       </div>
       <div className='visitors'>
-        <p>Visitiors</p>
+        <p>Visitors</p>
         <p>{countLike}</p>
       </div>
     </div>
