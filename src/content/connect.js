@@ -1,16 +1,45 @@
 import React, { useState, useEffect } from 'react';
+import { db } from "../config/firebase_config.js";
+import {
+  getDocs,
+  collection,
+  doc,
+  updateDoc,
+} from "firebase/firestore";
 
 export default function Connect() {
-  const [refreshCount, setRefreshCount] = useState(() => {
-    const count = parseInt(localStorage.getItem('refreshCount'), 10);
-    return isNaN(count) ? 1 : count; // Initialize state from localStorage or start with 1
-  });
+  const [countLike, setCountLike] = useState(0);
 
-  // useEffect to increment count on page refresh
+  const likeCollection = collection(db, 'like_count');
+
   useEffect(() => {
-    const newCount = refreshCount + 1;
-    localStorage.setItem('refreshCount', newCount);
-    setRefreshCount(newCount);
+    const updateLikeCount = async () => {
+      try {
+        // Fetch the documents in the 'like_count' collection
+        const data = await getDocs(likeCollection);
+        
+        if (!data.empty) {
+          // Assuming there's only one document in the 'like_count' collection
+          const docRef = doc(db, 'like_count', data.docs[0].id);
+          const docData = data.docs[0].data();
+          
+          // Increment the like count
+          const newLikeCount = (docData.like || 0) + 1;
+          
+          // Update the document with the new like count
+          await updateDoc(docRef, { like: newLikeCount });
+          
+          // Update local state
+          setCountLike(newLikeCount);
+        } else {
+          console.error('No documents found in like_count collection.');
+        }
+      } catch (err) {
+        console.log('Error updating like count:', err);
+      }
+    };
+
+    updateLikeCount();
   }, []);
 
   return (
@@ -31,10 +60,10 @@ export default function Connect() {
           <i className="fa-regular fa-envelope fa-2xl"></i>
         </a>
       </div>
-      {/* <div className='visitors'>
-        <p>Hit a Like</p>
-        <p>{refreshCount}</p>
-      </div> */}
+      <div className='visitors'>
+        <p>Visitiors</p>
+        <p>{countLike}</p>
+      </div>
     </div>
   );
 }

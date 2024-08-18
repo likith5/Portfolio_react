@@ -246,11 +246,6 @@ button:hover {
   .connect a {
     padding: 0 10px; /* Adjust padding as needed */
   }
-
-  .visitors {
-    display: none !important;
-  }
-
   .responsive {
     display: none;
   }
